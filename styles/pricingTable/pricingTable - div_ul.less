@@ -1,0 +1,404 @@
+﻿
+@import url(variable.less);
+@import url(mixin.less);
+@import url(palette.less);
+
+
+@bootstrap-color-blue: rgb(4, 156, 219);
+@bootstrap-color-green: rgb(70, 165, 70);
+@bootstrap-color-red: rgb(157, 38, 29);
+@bootstrap-color-yellow: rgb(255, 196, 13);
+@bootstrap-color-orange: rgb(248, 148, 6);
+@bootstrap-color-pink: rgb(195, 50, 95);
+@bootstrap-color-purple: rgb(122, 67, 182);
+
+
+
+@pColor1: @bootstrap-color-blue;
+.bg() {
+    background-image: url('/bgs/patterns/0 (1).png');
+    
+}
+body {
+    /*background-color: rgb(80, 80, 80);*/
+    background-color: rgb(240,240,240);
+    font-family: 'PT Sans';
+
+}
+
+.preview-color {
+    width: 20px;
+    height: 20px;
+    /*float: left;*/
+    border: 1px solid white;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.control-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(200,200,200);
+    background-color: rgba(200,200,200,.85);
+    border-bottom: 3px solid rgb(200,200,200);
+    width: 100%;
+    padding: 8px;
+    .box-sizing;
+    z-index: 250;
+}
+
+
+
+.plan-viewer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 0;
+    }
+
+    .plan-viewer {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 20px;
+    }
+
+    .control-panel {
+        position: static;
+        text-align: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .plan-viewer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.light-theme {
+    background-color: rgb(230,230,230);
+
+}
+
+.dark-theme {
+    background-color: rgb(80, 80, 80);
+}
+
+.divider {
+    height: 1px;
+    margin: 15px 0;
+    clear: both;
+}
+
+    .divider.large {
+        margin: 30px 0;
+    }
+
+    .divider.x-large {
+        margin: 45px 0;
+    }
+
+.shadow() {
+    position: relative;
+    .multiBoxShadow(~"0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset");
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -2;
+    }
+}
+
+.drop-shadow {
+    .shadow;
+
+    &:before {
+        .multiBoxShadow(0 0 5px rgba(0,0,0,.2));
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.shadow-lifted {
+    .shadow;
+
+    &:before, &:after {
+        bottom: 15px;
+        left: 10px;
+        width: 50%;
+        height: 20%;
+        max-width: 300px;
+        .multiBoxShadow(0 15px 10px rgba(0, 0, 0, 0.7));
+    }
+
+    &:before {
+        .transform(rotate(-3deg));
+    }
+
+    &:after {
+        right: 10px;
+        left: auto;
+        .transform(rotate(3deg));
+    }
+}
+
+.shadow-raised {
+    .shadow;
+
+    &:before {
+        .multiBoxShadow(~"0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset");
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.shadow-horizontal {
+    .shadow;
+
+    &:before {
+        .multiBoxShadow(0 0 15px rgba(0,0,0,0.6));
+        top: 0;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        border-radius: ~"100px/10px";
+    }
+}
+
+.shadow-vertical {
+    .shadow;
+
+    &:before {
+        top: 10px;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        .multiBoxShadow(0 0 15px rgba(0,0,0,0.6));
+        border-radius: ~"10px/100px";
+    }
+}
+
+
+
+.plan-container {
+    z-index: 2;
+    position: relative;
+}
+
+.plan {
+    background-color: rgb(245,245,245);
+    /*border: 2px solid white;*/
+    text-align: center;
+    /*.transition(.3s);*/
+    .transitionSlider(box-shadow 0.3s);
+
+    &:hover {
+        .multiBoxShadow(~"0 0 0 5px rgba(0,0,0,.1),0 0 40px rgba(0, 0, 0, 0.1) inset");
+
+        & .plan-header {
+            background-color: lighten(@pColor1,10%);
+        }
+    }
+}
+
+.plan-header {
+    background-color: @pColor1;
+    border-bottom: 1px solid darken(@pColor1,6%);
+    .insetBoxShadow(0,0,50px,rgba(0,0,0,0.07));
+    .transitionSlider(background-color 0.3s);
+    font-family: Iceberg;
+    font-size: 2em;
+    font-weight: bold;
+    color: darken(@pColor1,20%);
+    .textShadow(0,1px,1px,lighten(@pColor1,25%));
+    line-height: normal;
+    .bg;
+    & .plan-name, .plan-price {
+        display: block;
+        padding: 10px 0;
+        margin: 0 auto;
+        .transitionSlider(border-color 0.3s);
+    }
+
+    & .plan-name {
+        border-bottom: 1px solid darken(@pColor1,10%);
+    }
+
+    & .plan-price {
+        border-top: 1px solid lighten(@pColor1,10%);
+        font-size: 1.5em;
+    }
+}
+
+.plan-content {
+
+    & ul {
+        list-style: none;
+        margin: 0;
+
+        & li {
+            font-family: 'PT Sans';
+            padding: 10px;
+            border-bottom: 1px solid rgb(219, 219, 219);
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.plan-footer {
+    background-color: @pColor1;
+    padding: 15px 0;
+    .insetBoxShadow(0,0,50px,rgba(0,0,0,0.07));
+    border-top: 1px solid darken(@pColor1,6%);
+    .transitionSlider(background-color 0.3s);
+    .bg;
+
+}
+
+.pricing-select {
+    background-image: none;
+    border-radius: 0;
+    padding: 8px 15px;
+    color: lighten(@pColor1,30%);
+    background-color: darken(@pColor1,18%);
+    .boxShadow(0, 0, 5px,rgba(0,0,0,.5));
+    .multiBoxShadow(~"0 0 0 0 rgba(255,255,255,.2),0 0 5px rgba(0,0,0,.5) inset");
+    display: inline-block;
+    border: 1px solid lighten(@pColor1,5%);
+    .transitionSlider(all 0.3s);
+
+    & i {
+        margin-right: 5px;
+    }
+
+    &:hover {
+        background-color: darken(@pColor1,28%);
+        text-decoration: none;
+        color: lighten(@pColor1,40%);
+        .multiBoxShadow(~"0 0 0 3px rgba(255,255,255,.2),0 0 5px rgba(0,0,0,.5) inset");
+    }
+}
+
+
+.plan-color-generator(@planColor) {
+
+
+    .plan-header {
+        background-color: @planColor;
+        border-bottom: 1px solid darken(@planColor,6%);
+        color: darken(@planColor,16%);
+        .textShadow(0,1px,1px,lighten(@planColor,25%));
+
+
+        & .plan-name, .plan-price {
+            display: block;
+            padding: 10px 0;
+            margin: 0 auto;
+        }
+
+        & .plan-name {
+            border-bottom: 1px solid darken(@planColor,10%);
+        }
+
+        & .plan-price {
+            border-top: 1px solid lighten(@planColor,10%);
+            font-size: 1.5em;
+        }
+    }
+
+    .plan-footer {
+        background-color: @planColor;
+        border-top: 1px solid darken(@planColor,6%);
+    }
+
+    .pricing-select {
+        color: lighten(@planColor,30%);
+        background-color: darken(@planColor,18%);
+        border: 1px solid lighten(@planColor,5%);
+
+        &:hover {
+            background-color: darken(@planColor,28%);
+            color: lighten(@planColor,40%);
+        }
+    }
+
+    &:hover {
+        & .plan-header, & .plan-footer {
+            background-color: lighten(@planColor,10%);
+        }
+
+        & .plan-header {
+            & .plan-name {
+                border-bottom: 1px solid @planColor;
+            }
+
+            & .plan-price {
+                border-top: 1px solid lighten(@planColor,20%);
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+.plan.bootstrap-blue {
+    .plan-color-generator(@bootstrap-color-blue);
+}
+
+.plan.bootstrap-red {
+    .plan-color-generator(lighten(@bootstrap-color-red,10%));
+}
+
+.plan.bootstrap-green {
+    .plan-color-generator(@bootstrap-color-green);
+}
+
+.plan.bootstrap-pink {
+    .plan-color-generator(@bootstrap-color-pink);
+}
+
+.plan.bootstrap-orange {
+    .plan-color-generator(@bootstrap-color-orange);
+}
+
+.plan.bootstrap-purple {
+    .plan-color-generator(@bootstrap-color-purple);
+}
+
+.plan.bootstrap-yellow {
+    .plan-color-generator(@bootstrap-color-yellow);
+}
+
+.plan.light-grey {
+    .plan-color-generator(rgb(160,160,160));
+}
+
+.plan.grey {
+    .plan-color-generator(rgb(120,120,120));
+}
+
+.plan.dark-grey {
+    .plan-color-generator(rgb(80,80,80));
+}
+
+.plan.light-blue {
+    .plan-color-generator(@pure-cyan-blue);
+}
+
+.plan.no-shadow {
+    border: 1px solid rgb(219, 219, 219);
+}
+

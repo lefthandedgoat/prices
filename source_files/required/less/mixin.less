@@ -1,0 +1,326 @@
+﻿@import url(variable.less);
+
+
+
+.eggShellBg() {
+    background-image: url(../images/egg_shell.jpg);
+    background-repeat: repeat;
+}
+
+.fabricBg() {
+    background-image: url(../images/fabric.png);
+    background-repeat: repeat;
+}
+
+.sliderTexture() {
+    background-image: url('../images/textures/subtle/1 (14).png');
+    background-repeat: repeat;
+}
+
+.transition(@duration) {
+    -moz-transition-duration: @arguments;
+    -o-transition-duration: @arguments;
+    -webkit-transition-duration: @arguments;
+    transition-duration: @arguments;
+}
+
+.transform(@args) {
+    -moz-transform: @arguments;
+    -ms-transform: @arguments;
+    -o-transform: @arguments;
+    -webkit-transform: @arguments;
+    transform: @arguments;
+}
+
+.transformOrigin(@args) {
+    -moz-transform-origin: @arguments;
+    -ms-transform-origin: @arguments;
+    -o-transform-origin: @arguments;
+    -webkit-transform-origin: @arguments;
+    transform-origin: @arguments;
+}
+
+.boxShadow(@x,@y,@spread,@color) {
+    -o-box-shadow: @arguments;
+    -ms-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    -webkit-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+
+.multiBoxShadow(@args) {
+    -o-box-shadow: @arguments;
+    -ms-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    -webkit-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+
+.boxShadowNone() {
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.textShadow(@x,@y,@s,@color) {
+    -o-text-shadow: @arguments;
+    -moz-text-shadow: @arguments;
+    -ms-text-shadow: @arguments;
+    -webkit-text-shadow: @arguments;
+    text-shadow: @arguments;
+}
+
+.insetBoxShadow(@x,@y,@spread,@color) {
+    -o-box-shadow: inset @arguments;
+    -ms-box-shadow: inset @arguments;
+    -moz-box-shadow: inset @arguments;
+    -webkit-box-shadow: inset @arguments;
+    box-shadow: inset @arguments;
+}
+
+.textShadowNone() {
+    -o-text-shadow: none;
+    -ms-text-shadow: none;
+    -moz-text-shadow: none;
+    -webkit-text-shadow: none;
+    text-shadow: none;
+}
+
+.animationName(@name) {
+    -webkit-backface-visibility: visible !important;
+    -webkit-animation-name: @arguments;
+    -moz-backface-visibility: visible !important;
+    -moz-animation-name: @arguments;
+    -o-backface-visibility: visible !important;
+    -o-animation-name: @arguments;
+    backface-visibility: visible !important;
+    animation-name: @arguments;
+}
+
+.nutralizeMsFilter() {
+    -ms-filter: "none";
+}
+
+.background(@bgColor) {
+    background-color: @arguments;
+}
+
+.marginBottom(@length) {
+    margin-bottom: @arguments;
+}
+
+.serviceBoxTheme(@color) {
+    background-color: @color;
+    border-color: @color;
+    color: darken(@color,50%);
+    .textShadow(0,1px,1px,lighten(@color,15%));
+
+    &:hover {
+        border-color: @themeColor;
+
+        &[class^="icon-"], [class*=" icon-"], h1, h2, h3, h4, h5, h6 {
+            color: @themeColor;
+        }
+    }
+
+    &[class^="icon-"], [class*=" icon-"], h1, h2, h3, h4, h5, h6 {
+        .transition(.4s);
+    }
+
+    & p {
+        .textShadowNone();
+    }
+}
+
+.iconSize (@size) when (@size > 5) {
+
+
+    (~".icon-@{size}x") {
+        // your resulting css
+        font-size: ~"@{size}em";
+    }
+    // next iteration
+    .iconSize(@size - 1);
+}
+
+
+
+
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+    background: @color;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, @start), color-stop(1, @stop));
+    background: -ms-linear-gradient(bottom, @start, @stop);
+    background: -moz-linear-gradient(center bottom, @start 0%, @stop 100%);
+    background: -o-linear-gradient(@stop, @start);
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
+}
+
+.bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) {
+    background: @color;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(@start,@start,@start)), color-stop(1, rgb(@stop,@stop,@stop)));
+    background: -ms-linear-gradient(bottom, rgb(@start,@start,@start) 0%, rgb(@stop,@stop,@stop) 100%);
+    background: -moz-linear-gradient(center bottom, rgb(@start,@start,@start) 0%, rgb(@stop,@stop,@stop) 100%);
+    background: -o-linear-gradient(rgb(@stop,@stop,@stop), rgb(@start,@start,@start));
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",rgb(@stop,@stop,@stop),rgb(@start,@start,@start)));
+}
+
+
+
+.transitionSlider(@args) {
+    -moz-transition: @arguments;
+    -o-transition: @arguments;
+    -webkit-transition: @arguments;
+    transition: @arguments;
+}
+
+.box-sizing(@sizing: border-box) {
+    -ms-box-sizing: @sizing;
+    -moz-box-sizing: @sizing;
+    -webkit-box-sizing: @sizing;
+    box-sizing: @sizing;
+}
+
+.user-select(@argument: none) {
+    -webkit-user-select: @argument;
+    -moz-user-select: @argument;
+    -ms-user-select: @argument;
+    user-select: @argument;
+}
+
+
+
+
+.shadow() {
+    position: relative;
+    .multiBoxShadow(~"0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset");
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -2;
+    }
+}
+
+
+
+.plan-color-generator(@planColor) {
+
+
+    & > li.plan-footer {
+        background-color: @planColor;
+        border-top: 1px solid darken(@planColor,6%);
+
+        & .pricing-select {
+            color: lighten(@planColor,30%);
+            background-color: darken(@planColor,18%);
+            border: 1px solid lighten(@planColor,5%);
+
+
+            &:hover {
+                background-color: darken(@planColor,28%);
+                color: lighten(@planColor,40%);
+            }
+        }
+    }
+
+
+    & .plan-name, .plan-price {
+        background-color: @planColor;
+        border-bottom: 1px solid darken(@planColor,6%);
+        color: darken(@planColor,20%);
+        .textShadow(0,1px,1px,lighten(@planColor,25%));
+    }
+
+    & .plan-name {
+        border-bottom: 1px solid darken(@planColor,6%);
+    }
+
+    & .plan-price {
+        border-top: 1px solid lighten(@planColor,6%);
+    }
+
+    &.featured {
+        & .plan-header, .plan-name, .plan-price, .plan-footer {
+            background-color: lighten(@planColor,5%);
+        }
+    }
+
+    &:hover {
+        & .plan-header, .plan-name, .plan-price, .plan-footer {
+            background-color: lighten(@planColor,10%);
+        }
+
+        & .plan-name {
+            border-bottom: 1px solid @planColor;
+        }
+
+        & .plan-price {
+            border-top: 1px solid lighten(@planColor,12%);
+        }
+    }
+}
+
+
+.center-group-margin(@columns: 4,@fluid: 0) when (@fluid>0) {
+
+    @multiplyer: (@columns - 1)/2;
+
+    &.center-group:first-child {
+        margin-left: 2.127659574468085% * @multiplyer;
+        *margin-left: 2.074468085106383% * @multiplyer;
+    }
+
+    @media (min-width: 1200px) {
+
+        &.center-group:first-child {
+            margin-left: 2.564102564102564% * @multiplyer;
+            *margin-left: 2.5109110747408616% * @multiplyer;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 979px) {
+        &.center-group:first-child {
+            margin-left: 2.7624309392265194% * @multiplyer;
+            *margin-left: 2.709239449864817% * @multiplyer;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &.center-group:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.center-group-margin(@columns: 4) {
+
+    @multiplyer: (@columns - 1)/2;
+
+    &.center-group:first-child {
+        margin-left: 20px* @multiplyer;
+    }
+
+    @media (min-width: 1200px) {
+
+        &.center-group:first-child {
+            margin-left: 30px* @multiplyer;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 979px) {
+        &.center-group:first-child {
+            margin-left: 20px* @multiplyer;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &.center-group:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+

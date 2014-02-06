@@ -1,0 +1,44 @@
+﻿@import url(pricingTable/variable.less);
+@import url(pricingTable/mixin.less);
+@import url(pricingTable/palette.less);
+
+@import url('/preview.less');
+
+.page {
+    padding-bottom: 80px;
+}
+
+.desc, .code {
+    .box-sizing;
+}
+
+.desc {
+    background-color: rgb(211, 211, 211);
+    padding: 10px 30px 10px 30px;
+    .multiBoxShadow(inset 0 0 5px rgba(0,0,0,.2));
+    border: 1px solid rgb(180,180,180);
+
+    h1, h2, h3, h4, h5 {
+        .textShadow(0, 1px, 1px, white);
+        color: rgb(100, 100, 100);
+    }
+
+    .underline {
+        text-decoration: underline;
+    }
+
+    .color-swatch div[data-color] {
+        margin-top: 10px;
+    }
+}
+
+.code {
+    background-color: #1B2426;
+    border: 1px solid rgb(180,180,180);
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    & > div {
+        border: none!important;
+    }
+}

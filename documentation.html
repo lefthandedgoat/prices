@@ -1,0 +1,994 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="styles/bootstrap/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="font-icons/css/fontello.css" rel="stylesheet" />
+    <link href="font-icons/css/fontello-ie7.css" rel="stylesheet" />
+    <link href="styles/preview.min.css" rel="stylesheet" />
+    <link href="styles/pricingTable/pricingTable.min.css" rel="stylesheet" />
+    <link href="styles/pricingTable/moreColors.css" rel="stylesheet" />
+    <link href="styles/docs.css" rel="stylesheet" />
+    <link href="plugin/syntax/styles/shCore.css" rel="stylesheet" />
+    <link href="plugin/syntax/styles/shCoreRDark.css" rel="stylesheet" />
+    <link href="plugin/syntax/styles/shThemeRDark.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans|Iceberg' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#d1"> Css3 Pricing Table Docs</a>
+                <div class="nav-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav page-navigation">
+                        <li><a href="#d1">Intial Setup</a></li>
+                        <li><a href="#d2">Basic Syntax</a></li>
+                        <li><a href="#d3">Shadow Effects</a></li>
+                        <li><a href="#d4">Hover Effects</a></li>
+                        <li><a href="#d5">Color Theme</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#noData">More<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#d6">No Margin And Featurd Items</a></li>
+
+                                <li><a href="#d7">Theme Generator</a></li>
+                                <li><a href="#d8">Rounded</a></li>
+                                <li><a href="#d9">Boxed Effect</a></li>
+                                <li><a href="#d10">Columns & Using With Dark Background</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- /.nav-collapse -->
+            </div>
+        </div>
+        <!-- /navbar-inner -->
+    </div>
+    <div class="container page">
+        <div class="divider x-large" id="d1"></div>
+
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="desc">
+                    <h2>Intial Setup  Required Files</h2>
+                    <div class="divider"></div>
+                    <div class="code">
+                        <pre class="brush: xml">
+
+                            <link href="pricingTable.css" rel="stylesheet" />  
+                                    /*----must be required-----*/
+
+                            <link href="moreColors.css" rel="stylesheet" />   
+                                    /*----This File Is Optional Only Use If You Require More Color Themes-----*/
+
+
+
+                            /-------Optional Font Icons------/
+                            <link href="font-icons/css/fontello.css" rel="stylesheet" />
+                            <link href="font-icons/css/fontello-ie7.css" rel="stylesheet" />
+                            /*----------IF You Are Using Another Font Icons Or Font Awecome You Dont Need To Add This-------*/
+                            
+                                    
+                        </pre>
+                    </div>
+
+
+                    <h4>Files Short Description </h4>
+                    <ol>
+                        <li>all files You need is located under source_files folder</li>
+                        <li>pricingTable.css Includes Core Files With 11 Bootstrap Color Themes
+                           <!-- <dl>
+                                <dt>Color Themes In pricingTable.css</dt>
+                                <dd>
+                                    <ul>
+                                        <li>Bootstrap Blue</li>
+                                        <li>Bootstrap Green</li>
+                                        <li>Bootstrap Red</li>
+                                        <li>Bootstrap Yellow</li>
+                                        <li>Bootstrap Orange</li>
+                                        <li>Bootstrap Pink</li>
+                                        <li>Bootstrap Purple</li>
+                                        <li>Bootstrap Dark Blue</li>
+                                        <li>Light Grey</li>
+                                        <li>Grey</li>
+                                        <li>Dark Grey</li>
+                                    </ul>
+                                </dd>
+                            </dl>-->
+                        </li>
+                        <li>moreColors.css Contains Additonal 31  Color Themes</li>
+                        <li>More Details About Color Themes And css Classes Required To Use That Themes Explained In Color Themes Section</li>
+                    </ol>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="divider large"></div>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="plan-container">
+                    <ul class="plan drop-shadow">
+                        <li class="plan-name">Starter</li>
+                        <li class="plan-price">15 $</li>
+                        <li>5 GB RAM</li>
+                        <li>125 GB HDD</li>
+                        <li>4 GHz Speed</li>
+                        <li>Unlimited upload</li>
+                        <li>Unlimited download</li>
+                        <li>24hrs support</li>
+                        <li class="plan-footer"><a href="#link" class="pricing-select"><i class="icon-lock-open-alt"></i>Sign Up Now</a></li>
+                    </ul>
+                </div>
+                <div class="divider visible-phone"></div>
+            </div>
+            <div class="span9">
+                <div class="desc">
+                    <h2>Intial Setup</h2>
+                    <div class="divider"></div>
+                    <div class="code">
+                        <pre class="brush: xml">
+
+
+
+                                <div class="row">   /*----row or row-fluid---*/
+
+                                     <div class="span3 plan-container">
+
+                                           <ul class="plan drop-shadow">
+
+                                               ...Pricing Table Data Goes Here...
+
+                                           </ul>
+                             
+                                     </div>
+
+                                </div> 
+
+                                    
+                        </pre>
+                    </div>
+
+
+                    <h4>Initial Setup With Bootstrap</h4>
+                    <ol>
+                        <li>you can apply any span1...span12 class to div.plan-container,Which determines  The Columns of A Pricing Table
+                        </li>
+                        <li>Then Comes The ul.plan</li>
+                        <li>The drop Shadow Adds a simple shadow effect to the plan</li>
+                    </ol>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="divider large" id="d2"></div>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="plan-container ">
+                    <ul class="plan shadow-raised bootstrap-green">
+                        <li class="plan-name">Starter</li>
+                        <li class="plan-price">15 $</li>
+                        <li>5 GB RAM</li>
+                        <li>125 GB HDD</li>
+                        <li>4 GHz Speed</li>
+                        <li>Unlimited upload</li>
+                        <li>Unlimited download</li>
+                        <li>24hrs support</li>
+                        <li class="plan-footer"><a href="#link" class="pricing-select"><i class="icon-lock-open-alt"></i>Sign Up Now</a></li>
+                    </ul>
+                </div>
+                <div class="divider visible-phone"></div>
+
+            </div>
+            <div class="span9">
+                <div class="desc">
+                    <h2>Basic Syntax</h2>
+                    <div class="divider"></div>
+                    <div class="code">
+
+                        <pre class="brush: xml">
+
+                        <div class="plan-container">
+
+                            <ul class="plan drop-shadow">
+
+                                <li class="plan-name">Plan Name</li>
+                                <li class="plan-price">00.00 $</li>
+
+                                <li>Feature 1</li>
+                                <li>Feature 2</li>
+                                <li>Feature 3</li>
+                                <li>Feature 4</li>
+                                <li>Feature 5</li>
+
+                                <li class="plan-footer">
+                                    <a href="#link" class="pricing-select">
+                                        <i class="icon-lock-open-alt"></i>
+                                        Sign Up Now
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        </pre>
+                    </div>
+                    <div class="divider"></div>
+                    <h4>Basic Syntax</h4>
+                    <ol>
+                        <li>IF You Are Using Other Icons Or Icon-fonts Then Change the "icon-lock-open-alt" with your icon class in "plan-footer"</li>
+
+                        <li>Icon Used  In A Button Is Generated From <a href="http://fontello.com/" target="_blank">Fontello</a> A Online Icon Fonts Generator Tool</li>
+                        <li>If You Need More/Other Icons Then Go To <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a></li>
+                    </ol>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="divider large" id="d3"></div>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="plan-container ">
+                    <ul class="plan shadow-raised bootstrap-yellow">
+                        <li class="plan-name">Starter</li>
+                        <li class="plan-price">15 $</li>
+                        <li>5 GB RAM</li>
+                        <li>125 GB HDD</li>
+                        <li>4 GHz Speed</li>
+                        <li>Unlimited upload</li>
+                        <li>Unlimited download</li>
+                        <li>24hrs support</li>
+                        <li class="plan-footer"><a href="#link" class="pricing-select"><i class="icon-lock-open-alt"></i>Sign Up Now</a></li>
+                    </ul>
+                </div>
+                <div class="divider visible-phone"></div>
+
+            </div>
+            <div class="span9">
+                <div class="desc">
+                    <h2>Shadow Effects</h2>
+                    <div class="divider"></div>
+                    <div class="code">
+
+                        <pre class="brush: xml">
+
+                        
+                             /*---Preview Is Included In preview.html#s2 ---*/
+
+                            <ul class="plan no-shadow"> .... </ul>   
+                                        /*---No Shadow---*/
+
+                            <ul class="plan drop-shadow"> .... </ul>   
+                                        /*---Simple Shadow---*/
+
+                            <ul class="plan shadow-lifted"> .... </ul>   
+                                        /*---Shadow Lifted---*/
+
+                            <ul class="plan shadow-raised"> .... </ul>   
+                                        /*---Shadow Raised---*/
+
+                            <ul class="plan shadow-horizontal"> .... </ul>  
+                                     /*---Shadow like Lifted On Both Horizontal Sides---*/
+
+                            <ul class="plan shadow-vertical"> .... </ul>  
+                                     /*---Shadow like Lifted On Both Vertical Sides---*/
+
+                        
+
+                        </pre>
+                    </div>
+                    <div class="divider"></div>
+                    <h4>Shadow Effects</h4>
+                    <ol>
+                        <li>Preview Of Shadows In <a href="preview.html#s2" target="_blank">preview.html#s2.</a><br />
+                        </li>
+
+                        <li>no-shadow class removes drop shadow and adds one pixel soft border.</li>
+                        <li>drop-shadow class adds basic shadow</li>
+                        <li>shadow-lifted class adds lifted style Shadow On Bottom</li>
+                        <li>shadow-raised adds raised effect at bottom</li>
+                        <li>shadow-horizontal adds shadow on both horizontal sides </li>
+                        <li>shadow-vertical adds shadow on both Vertical sides</li>
+                    </ol>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="divider large" id="d4"></div>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="plan-container hover-scale">
+                    <ul class="plan shadow-raised bootstrap-orange">
+                        <li class="plan-name">Starter</li>
+                        <li class="plan-price">15 $</li>
+                        <li>5 GB RAM</li>
+                        <li>125 GB HDD</li>
+                        <li>4 GHz Speed</li>
+                        <li>Unlimited upload</li>
+                        <li>Unlimited download</li>
+                        <li>24hrs support</li>
+                        <li class="plan-footer"><a href="#link" class="pricing-select"><i class="icon-lock-open-alt"></i>Sign Up Now</a></li>
+                    </ul>
+                </div>
+                <div class="divider visible-phone"></div>
+
+            </div>
+            <div class="span9">
+                <div class="desc">
+                    <h2>Hover Effects</h2>
+                    <div class="divider"></div>
+                    <div class="code">
+
+                        <pre class="brush: xml">
+
+                        <div class="plan-container">
+                            <ul class="plan drop-shadow">
+                                ...
+                            </ul>
+                        </div>
+                            /*----Simple Boxed Animation Is Default On any Plan----*/
+
+
+                            
+                        <div class="plan-container">
+                            <ul class="plan drop-shadow no-boxed-animation">
+                                ...
+                            </ul>
+                        </div>
+                            /*----Disabled Boxed Effect with "no-boxed-animation" class----*/
+                            
+
+                            
+                        <div class="plan-container">
+                            <ul class="plan drop-shadow hover-animate-position">
+                                ...
+                            </ul>
+                        </div>
+                            /*----Enable Position Animation with "hover-animate-position" class----*/
+                            
+                            
+
+                            
+                        <div class="plan-container hover-scale">   
+                            <ul class="plan drop-shadow">
+                                ...
+                            </ul>
+                        </div>
+                            /*----Adds scale Animation with "hover-scale" applied o----*/
+
+                            NOTE:******* "hover-scale" needs to apply on "plan-container". 
+
+
+
+
+                            Using Hover Scale Effect With Smooth Animations In crome needs to 
+                                    Add Following Script In Body Element at end of document
+
+                                    <script type="text/javascript">
+                                        var is_chrome = navigator.userAgent.toLowerCase().indexOf("chrome") > -1;
+                                        if (is_chrome)
+                                        {
+                                            document.getElementsByTagName("body")[0].className += " chrome";
+                                        }
+
+                                    </script>
+                              
+                            /*---This Script Does Not Require Any Extra Scripts Or Frameworks---*/
+                            /*---This Will Fix The Animation Bug In Safari and Chrome---*/
+                            
+
+
+                        </pre>
+                    </div>
+                    <div class="divider"></div>
+                    <h4>Hover Effects </h4>
+                    <ol>
+                        <li>Scaling Animation class <b>"hover-scale" needs To apply On "plan-container"</b> Element Not On "plan" </li>
+                        <li>Extra Script Mentioned Above Only Required When Using "hover-scale"</li>
+
+                    </ol>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="divider large" id="d5"></div>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="plan-container ">
+                    <ul class="plan shadow-raised dark-grey">
+                        <li class="plan-name">Starter</li>
+                        <li class="plan-price">15 $</li>
+                        <li>5 GB RAM</li>
+                        <li>125 GB HDD</li>
+                        <li>4 GHz Speed</li>
+                        <li>Unlimited upload</li>
+                        <li>Unlimited download</li>
+                        <li>24hrs support</li>
+                        <li class="plan-footer"><a href="#link" class="pricing-select"><i class="icon-lock-open-alt"></i>Sign Up Now</a></li>
+                    </ul>
+                </div>
+                <div class="divider visible-phone"></div>
+
+            </div>
+            <div class="span9">
+                <div class="desc">
+                    <h2>Color Themes</h2>
+                    <div class="divider"></div>
+                    <div class="code">
+
+                        <pre class="brush: xml">
+
+                        <link href="styles/pricingTable.css" rel="stylesheet" />  
+                               //--Color Themes In Main CSS File
+                            
+                            --Bootstrap Colors
+                                <ul class="plan bootstrap-blue"></ul>
+                                <ul class="plan bootstrap-dark-blue"></ul>
+                                <ul class="plan bootstrap-green"></ul>
+                                <ul class="plan bootstrap-orange"></ul>
+                                <ul class="plan bootstrap-pink"></ul>
+                                <ul class="plan bootstrap-purple"></ul>
+                                <ul class="plan bootstrap-red"></ul>
+                                <ul class="plan bootstrap-yellow"></ul>
+
+                            --Grey Colors
+
+                                <ul class="plan light-grey"></ul>
+                                <ul class="plan grey"></ul>
+                                <ul class="plan dark-grey"></ul>
+
+
+
+                            <link href="styles/moreColors.css" rel="stylesheet" />   
+                                    /*----Color Themes In More Colors Css File-----*/
+                                
+                            --Grey Shades--
+                                <ul class="plan grey-20"></ul>
+                                       //---From "grey-20" to "grey-90" with
+                                              number 5 Increment Each.
+                                                    Where 20 to 90 is Intensity Of Color.
+                                <ul class="plan grey-90"></ul>
+
+                            --CMYK Colors 
+                                <ul class="plan cmyk-blue"></ul>
+                                <ul class="plan cmyk-cyan"></ul>
+                                <ul class="plan cmyk-green"></ul>
+                                <ul class="plan cmyk-magenta"></ul>
+                                <ul class="plan cmyk-red"></ul>
+                                <ul class="plan cmyk-yellow"></ul>
+
+                            --pure Colors
+                                <ul class="plan red"></ul>
+                                <ul class="plan orange"></ul>
+                                <ul class="plan pure-orange"></ul>
+                                <ul class="plan light-orange"></ul>
+                                <ul class="plan light-green"></ul>
+                                <ul class="plan green"></ul>
+                                <ul class="plan blue"></ul>
+                                <ul class="plan dark-blue"></ul>
+                                <ul class="plan purple"></ul>
+                                <ul class="plan sky-blue"></ul>
+                                
+                                
+
+
+                        </pre>
+                    </div>
+                    <div class="divider"></div>
+                    <h4>40+ Color Themes (Click The Color Below To See/Hide Css Class Details)</h4>
+                    <ul class="unstyled">
+                        <li>Bootstrap Colors</li>
+                        <li class="color-swatch">
+                            <div class="preview-color" data-color="rgb(4, 156, 219)" title="Bootstrap Blue" data-class="bootstrap-blue"></div>
+                            <div class="preview-color" data-color="rgb(70, 165, 70)" title="Bootstrap Green" data-class="bootstrap-green"></div>
+                            <div class="preview-color" data-color="rgb(157, 38, 29)" title="Bootstrap Red" data-class="bootstrap-red"></div>
+                            <div class="preview-color" data-color="rgb(255, 196, 13)" title="Bootstrap Yellow" data-class="bootstrap-yellow"></div>
+                            <div class="preview-color" data-color="rgb(248, 148, 6)" title="Bootstrap Orange" data-class="bootstrap-orange"></div>
+                            <div class="preview-color" data-color="rgb(195, 50, 95)" title="Bootstrap Pink" data-class="bootstrap-pink"></div>
+                            <div class="preview-color" data-color="rgb(122, 67, 182)" title="Bootstrap Purple" data-class="bootstrap-purple"></div>
+                            <div class="preview-color" data-color="#0064cd" title="Bootstrap Dark Blue" data-class="bootstrap-dark-blue"></div>
+                        </li>
+                        <li>Grey Basic</li>
+                        <li class="color-swatch">
+                            <div class="preview-color" data-color="rgb(160,160,160)" title="Light Grey" data-class="light-grey"></div>
+                            <div class="preview-color" data-color="rgb(120,120,120)" title="Grey" data-class="grey"></div>
+                            <div class="preview-color" data-color="rgb(80,80,80)" title="Dark Grey" data-class="dark-grey"></div>
+                        </li>
+                        <li>Grey Advanced</li>
+                        <li class="color-swatch">
+                            <div class="preview-color" data-color="rgb(215, 215, 215)" title="gray-20%" data-class="grey-20"></div>
+                            <div class="preview-color" data-color="rgb(204, 204, 204)" title="gray-25%" data-class="grey-25"></div>
+                            <div class="preview-color" data-color="rgb(194, 194, 194)" title="gray-30%" data-class="grey-30"></div>
+                            <div class="preview-color" data-color="rgb(183, 183, 183)" title="gray-35%" data-class="grey-35"></div>
+                            <div class="preview-color" data-color="rgb(172, 172, 172)" title="gray-40%" data-class="grey-40"></div>
+                            <div class="preview-color" data-color="rgb(161, 161, 161)" title="gray-45%" data-class="grey-45"></div>
+                            <div class="preview-color" data-color="rgb(149, 149, 149)" title="gray-50%" data-class="grey-50"></div>
+                            <div class="preview-color" data-color="rgb(137, 137, 137)" title="gray-55%" data-class="grey-55"></div>
+                            <div class="preview-color" data-color="rgb(125, 125, 125)" title="gray-60%" data-class="grey-60"></div>
+                            <div class="preview-color" data-color="rgb(112, 112, 112)" title="gray-65%" data-class="grey-65"></div>
+                            <div class="preview-color" data-color="rgb(99, 99, 99)" title="gray-70%" data-class="grey-70"></div>
+                            <div class="preview-color" data-color="rgb(85, 85, 85)" title="gray-75%" data-class="grey-75"></div>
+                            <div class="preview-color" data-color="rgb(70, 70, 70)" title="gray-80%" data-class="grey-80"></div>
+                            <div class="preview-color" data-color="rgb(54, 54, 54)" title="gray-85%" data-class="grey-85"></div>
+                            <div class="preview-color" data-color="rgb(37, 37, 37)" title="gray-90%" data-class="grey-90"></div>
+                        </li>
+                        <li>Cmyk Colors</li>
+                        <li class="color-swatch">
+                            <div class="preview-color" data-color="rgb(237, 28, 36)" title="Cmyk Red" data-class="cmyk-red"></div>
+                            <div class="preview-color" data-color="rgb(255, 242, 0)" title="Cmyk Yellow" data-class="cmyk-yellow"></div>
+                            <div class="preview-color" data-color="rgb(0, 166, 81)" title="Cmyk Green" data-class="cmyk-green"></div>
+                            <div class="preview-color" data-color="rgb(0, 174, 239)" title="Cmyk Cyan" data-class="cmyk-cyan"></div>
+                            <div class="preview-color" data-color="rgb(46, 49, 146)" title="Cmyk blue" data-class="cmyk-blue"></div>
+                            <div class="preview-color" data-color="rgb(236, 0, 140)" title="Cmyk magenta" data-class="cmyk-magenta"></div>
+                        </li>
+                        <li>Pure Colors</li>
+                        <li class="color-swatch">
+                            <div class="preview-color" data-color="#ea2a29" title="red" data-class="red"></div>
+                            <div class="preview-color" data-color="#f16729" title="orange" data-class="orange"></div>
+                            <div class="preview-color" data-color="rgb(255, 106, 0)" title="pure orange" data-class="pure-orange"></div>
+                            <div class="preview-color" data-color="#f89322" title="light orange" data-class="light-orange"></div>
+                            <div class="preview-color" data-color="#87b11d" title="light green" data-class="light-green"></div>
+                            <div class="preview-color" data-color="#008253" title="green" data-class="green"></div>
+                            <div class="preview-color" data-color="#3277b5" title="blue" data-class="blue"></div>
+                            <div class="preview-color" data-color="#4c549f" title="dark blue" data-class="dark-blue"></div>
+                            <div class="preview-color" data-color="#764394" title="purple" data-class="purple"></div>
+                            <div class="preview-color" data-color="#19E7E9" title="sky blue" data-class="sky-blue"></div>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="divider large" id="d6"></div>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="plan-container ">
+                    <ul class="plan shadow-raised bootstrap-pink">
+                        <li class="plan-name">Starter</li>
+                        <li class="plan-price">15 $</li>
+                        <li>5 GB RAM</li>
+                        <li>125 GB HDD</li>
+                        <li>4 GHz Speed</li>
+                        <li>Unlimited upload</li>
+                        <li>Unlimited download</li>
+                        <li>24hrs support</li>
+                        <li class="plan-footer"><a href="#link" class="pricing-select"><i class="icon-lock-open-alt"></i>Sign Up Now</a></li>
+                    </ul>
+                </div>
+                <div class="divider visible-phone"></div>
+
+            </div>
+            <div class="span9">
+                <div class="desc">
+                    <h2>No Margin & Featured Item</h2>
+                    <div class="divider"></div>
+                    <div class="code">
+
+                        <pre class="brush: xml">
+
+                        <div class="span3 plan-container no-margin" >
+                            <ul class="plan drop-shadow hover-animate-position">
+                                ....
+                            </ul>
+                        </div> //---"no-margin" class removes margin applied with any span class.
+
+
+                        <div class="span3 plan-container no-margin center-group col-4" >
+                            <ul class="plan drop-shadow hover-animate-position">
+                                ....
+                            </ul>
+                        </div> //---"center-group" along with "col-4" used for center columns "col-4" 
+                                        can be replaced with "col-2","col-3","col-4","col-5","col-6" .
+                                //---"col-4" where number 4 descrides number of columns used in Pricing Table.
+                                
+                                //This Class Only Needs To Apply On First Column Of Pricing Table
+
+
+                         <div class="span3 plan-container no-margin featured" >
+                            <ul class="plan drop-shadow featured hover-animate-position">
+                                ....
+                            </ul>
+                        </div> //---"featured" class heighlights featured column.
+                                // Tips***---Featured Column With Different color theme will look very good.
+
+                        </pre>
+                    </div>
+                    <div class="divider"></div>
+                    <h4>No Margin And Feature Item</h4>
+                    <ol>
+                        <li>Add "hover-animate-position" To Make It Pretty When Using No Margin</li>
+                        <li>"no-margin" needs to apply on all "plan-container".</li>
+                        <li>The Only <b>First Element With "no-margin" </b>Needs "center-group col-4" class Which Will Center The Columns In Pricing Table.</li>
+                        <li>for Featured Item Adds "featured" class on both "plan-container" and "plan"</li>
+                    </ol>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="divider large" id="d7"></div>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="plan-container ">
+                    <ul class="plan shadow-raised pure-orange">
+                        <li class="plan-name">Starter</li>
+                        <li class="plan-price">15 $</li>
+                        <li>5 GB RAM</li>
+                        <li>125 GB HDD</li>
+                        <li>4 GHz Speed</li>
+                        <li>Unlimited upload</li>
+                        <li>Unlimited download</li>
+                        <li>24hrs support</li>
+                        <li class="plan-footer"><a href="#link" class="pricing-select"><i class="icon-lock-open-alt"></i>Sign Up Now</a></li>
+                    </ul>
+                </div>
+                <div class="divider visible-phone"></div>
+
+            </div>
+            <div class="span9">
+                <div class="desc">
+                    <h2>Color Theme Generate</h2>
+                    <div class="divider"></div>
+                    <div class="code">
+
+                        <pre class="brush: css">
+
+                            .textShadow(@x,@y,@s,@color) {
+                                -o-text-shadow: @arguments;
+                                -moz-text-shadow: @arguments;
+                                -ms-text-shadow: @arguments;
+                                -webkit-text-shadow: @arguments;
+                                text-shadow: @arguments;
+                            }
+                            .plan-color-generator(@planColor) {
+
+
+                                & > li.plan-footer {
+                                    background-color: @planColor;
+                                    border-top: 1px solid darken(@planColor,6%);
+
+                                    & .pricing-select {
+                                        color: lighten(@planColor,30%);
+                                        background-color: darken(@planColor,18%);
+                                        border: 1px solid lighten(@planColor,5%);
+
+
+                                        &:hover {
+                                            background-color: darken(@planColor,28%);
+                                            color: lighten(@planColor,40%);
+                                        }
+                                    }
+                                }
+
+
+                                & .plan-name, .plan-price {
+                                    background-color: @planColor;
+                                    border-bottom: 1px solid darken(@planColor,6%);
+                                    color: darken(@planColor,20%);
+                                    .textShadow(0,1px,1px,lighten(@planColor,25%));
+                                }
+
+                                & .plan-name {
+                                    border-bottom: 1px solid darken(@planColor,6%);
+                                }
+
+                                & .plan-price {
+                                    border-top: 1px solid lighten(@planColor,6%);
+                                }
+
+                                &.featured {
+                                    & .plan-header, .plan-name, .plan-price, .plan-footer {
+                                        background-color: lighten(@planColor,5%);
+                                    }
+                                }
+
+                                &:hover {
+                                    & .plan-header, .plan-name, .plan-price, .plan-footer {
+                                        background-color: lighten(@planColor,10%);
+                                    }
+
+                                    & .plan-name {
+                                        border-bottom: 1px solid @planColor;
+                                    }
+
+                                    & .plan-price {
+                                        border-top: 1px solid lighten(@planColor,12%);
+                                    }
+                                }
+                            }
+
+
+
+                            //For Generating css you just need to change the "cyan" to your theme color on line 78.
+                            //change The "color-theme" with your class on line 77 which will be 
+                                        //applied to the pricing table in order to use generated color theme. 
+
+                            //Double Click To Edit
+                            //Can Pass color name or color code
+
+
+
+
+                            .plan.color-theme{
+                                .plan-color-generator(cyan);
+                            }
+
+
+                            //Follow The Instruction Below If You Are New To Less
+
+                        </pre>
+                    </div>
+                    <div class="divider"></div>
+                    <h4>Theme Generator</h4>
+                    <ol>
+                        <li>Quick Generate Online Tool <a href="http://less2css.org/" target="_blank">Less 2 Css</a></li>
+                        <li>Double Click In Above Code Section To Edit</li>
+                        <li>In Above Code On Line 78 the "cyan" is a color you need to change either with valid color name or color code</li>
+                        <li>On Line 77  Replace "color-theme" with your class which will be applied to the pricing table in order to use generated color theme</li>
+                        <li>Then Copy It Into Less Input On <a href="http://less2css.org/" target="_blank">Less 2 Css</a></li>
+                        <li>Then Copy The Css Output To Your website and its done</li>
+
+                    </ol>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="divider large" id="d8"></div>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="plan-container ">
+                    <ul class="plan shadow-raised cmyk-red rounded-10px">
+                        <li class="plan-name">Starter</li>
+                        <li class="plan-price">15 $</li>
+                        <li>5 GB RAM</li>
+                        <li>125 GB HDD</li>
+                        <li>4 GHz Speed</li>
+                        <li>Unlimited upload</li>
+                        <li>Unlimited download</li>
+                        <li>24hrs support</li>
+                        <li class="plan-footer"><a href="#link" class="pricing-select"><i class="icon-lock-open-alt"></i>Sign Up Now</a></li>
+                    </ul>
+                </div>
+                <div class="divider visible-phone"></div>
+
+            </div>
+            <div class="span9">
+                <div class="desc">
+                    <h2>Rounded</h2>
+                    <div class="divider"></div>
+                    <div class="code">
+
+                        <pre class="brush: xml">
+
+                        <ul class="plan  rounded-10px">...</ul>
+
+                            //apply any "rounded","rounded-10px",
+                                        "rounded-15px","rounded-20px","rounded-25px","rounded-30px".
+
+                            //"rounded" class has  5px border radius
+
+                        </pre>
+                    </div>
+                    <div class="divider"></div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="divider large" id="d9"></div>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="plan-container ">
+                    <ul class="plan shadow-raised cmyk-green boxed">
+                        <li class="plan-name">Starter</li>
+                        <li class="plan-price">15 $</li>
+                        <li>5 GB RAM</li>
+                        <li>125 GB HDD</li>
+                        <li>4 GHz Speed</li>
+                        <li>Unlimited upload</li>
+                        <li>Unlimited download</li>
+                        <li>24hrs support</li>
+                        <li class="plan-footer"><a href="#link" class="pricing-select"><i class="icon-lock-open-alt"></i>Sign Up Now</a></li>
+                    </ul>
+                </div>
+                <div class="divider visible-phone"></div>
+
+            </div>
+            <div class="span9">
+                <div class="desc">
+                    <h2>Boxed Style/Effect</h2>
+                    <div class="divider"></div>
+                    <div class="code">
+
+                        <pre class="brush: xml">
+
+                        <ul class="plan boxed">...</ul>
+
+                           //"boxed" will add box style effect as a static
+
+                        </pre>
+                    </div>
+                    <div class="divider"></div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="divider large" id="d10"></div>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="plan-container ">
+                    <ul class="plan shadow-raised sky-blue">
+                        <li class="plan-name">Starter</li>
+                        <li class="plan-price">15 $</li>
+                        <li>5 GB RAM</li>
+                        <li>125 GB HDD</li>
+                        <li>4 GHz Speed</li>
+                        <li>Unlimited upload</li>
+                        <li>Unlimited download</li>
+                        <li>24hrs support</li>
+                        <li class="plan-footer"><a href="#link" class="pricing-select"><i class="icon-lock-open-alt"></i>Sign Up Now</a></li>
+                    </ul>
+                </div>
+                <div class="divider visible-phone"></div>
+
+            </div>
+            <div class="span9">
+                <div class="desc">
+                    <h2>3 columns And columns Setup</h2>
+                    <div class="divider"></div>
+                    <div class="code">
+
+                        <pre class="brush: xml">
+
+                        // "3" columns Setup
+                            <div class="row-fluid">
+                                <div class="span4 plan-container">
+                                    <ul class="plan">
+                                        ...
+                                    </ul>
+                                </div>
+                                <div class="span4 plan-container">
+                                    <ul class="plan">
+                                        ...
+                                    </ul>
+                                </div>
+                                <div class="span4 plan-container">
+                                    <ul class="plan">
+                                        ...
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        // "4" columns Setup
+                            <div class="row-fluid">
+                                <div class="span3 plan-container">
+                                    <ul class="plan">
+                                        ...
+                                    </ul>
+                                </div>
+                                <div class="span3 plan-container">
+                                    <ul class="plan">
+                                        ...
+                                    </ul>
+                                </div>
+                                <div class="span3 plan-container">
+                                    <ul class="plan">
+                                        ...
+                                    </ul>
+                                </div>
+                                 <div class="span3 plan-container">
+                                    <ul class="plan">
+                                        ...
+                                    </ul>
+                                </div>
+                            </div>
+
+                            //"2" columns Setup
+                            <div class="row-fluid">
+                                <div class="span6 plan-container">
+                                    <ul class="plan">
+                                        ...
+                                    </ul>
+                                </div>
+                                
+                                <div class="span6 plan-container">
+                                    <ul class="plan">
+                                        ...
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+                            //Dark Backgrounds
+                            <ul class="plan dark-bg">...</ul>
+
+                            //Add "dark-bg" When Using Dark Backgrounds.
+                                    // Which Makes The Effect Appropriate For Dark Backgrounds
+                        </pre>
+                    </div>
+                    <div class="divider"></div>
+                    
+                    <h4>Using With Dark Colors </h4>
+                    <ol>
+                        <li>Add "dark-bg" When Using Dark Backgrounds.Which Makes The Effect Appropriate For Dark Backgrounds</li>
+
+                    </ol>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/jquery-migrate-1.2.1.min.js"></script>
+    <script src="scripts/jquery.easing.1.3.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="plugin/syntax/scripts/shCore.js"></script>
+    <script src="plugin/syntax/scripts/shBrushXml.js"></script>
+    <script src="plugin/syntax/scripts/shBrushCss.js"></script>
+    <script type="text/javascript">
+        SyntaxHighlighter.all()
+    </script>
+    <script type="text/javascript">
+        $(function ()
+        {
+            $(".page-navigation a[href^='#d']").click(
+                function (evt)
+                {
+
+                    evt.preventDefault();
+                    var position = $($(this).attr("href")).offset().top;
+                    $("body,html").stop().animate({ scrollTop: position - 50 }, 800, "easeOutQuart");
+
+                }
+            );
+            $(".color-swatch div[data-color]").each(function ()
+            {
+                $(this).css("background-color", $(this).data("color"));
+            });
+            $(".color-swatch .preview-color").popover({
+                placement: "bottom",
+                html: true,
+
+                content: function ()
+                {
+                    return "CSS CLASS : &nbsp;<strong>" + $(this).data("class") + "</strong>";
+                }
+
+            });
+
+
+
+
+
+        });
+    </script>
+
+</body>
+</html>
