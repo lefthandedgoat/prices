@@ -1534,3 +1534,154 @@
 .plan.sky-blue:hover .plan-price {
   border-top: 1px solid #51edee;
 }
+
+.plan.defi-blue > li.plan-footer {
+  background-color: #19e7e9;
+  border-top: 1px solid #14ced0;
+}
+.plan.defi-blue > li.plan-footer .pricing-select {
+  color: #a5f6f6;
+  background-color: #0f9698;
+  border: 1px solid #30e9eb;
+}
+.plan.defi-blue > li.plan-footer .pricing-select:hover {
+  background-color: #0a6869;
+  color: #d3fafb;
+}
+.plan.defi-blue .plan-name,
+.plan.defi-blue .plan-price {
+  background-color: #19e7e9;
+  border-bottom: 1px solid #14ced0;
+  color: #0e8d8e;
+  -o-text-shadow: 0 1px 1px #8df3f4;
+  -moz-text-shadow: 0 1px 1px #8df3f4;
+  -ms-text-shadow: 0 1px 1px #8df3f4;
+  -webkit-text-shadow: 0 1px 1px #8df3f4;
+  text-shadow: 0 1px 1px #8df3f4;
+}
+.plan.defi-blue .plan-name {
+  border-bottom: 1px solid #14ced0;
+}
+.plan.defi-blue .plan-price {
+  border-top: 1px solid #01AFF3;
+}
+.plan.defi-blue.featured .plan-header,
+.plan.defi-blue.featured .plan-name,
+.plan.defi-blue.featured .plan-price,
+.plan.defi-blue.featured .plan-footer {
+  background-color: #30e9eb;
+}
+.plan.defi-blue:hover .plan-header,
+.plan.defi-blue:hover .plan-name,
+.plan.defi-blue:hover .plan-price,
+.plan.defi-blue:hover .plan-footer {
+  background-color: #19A9E6;
+}
+.plan.defi-blue:hover .plan-name {
+  border-bottom: 1px solid #19e7e9;
+}
+.plan.defi-blue:hover .plan-price {
+  border-top: 1px solid #51edee;
+}
+
+
+.plan.defi-grey-25 > li.plan-footer {
+  background-color: #cccccc;
+  border-top: 1px solid #bdbdbd;
+}
+.plan.defi-grey-25 > li.plan-footer .pricing-select {
+  color: #ffffff;
+  background-color: #9e9e9e;
+  border: 1px solid #d9d9d9;
+}
+.plan.defi-grey-25 > li.plan-footer .pricing-select:hover {
+  background-color: #858585;
+  color: #ffffff;
+}
+.plan.defi-grey-25 .plan-name,
+.plan.defi-grey-25 .plan-price {
+  font-family: Calibri,Tahoma,Arial;
+  background-color: #cccccc;
+  border-bottom: 1px solid #bdbdbd;
+  color: #01AFF3;
+  -o-text-shadow: 0 1px 1px #70d8ff;
+  -moz-text-shadow: 0 1px 1px #70d8ff;
+  -ms-text-shadow: 0 1px 1px #70d8ff;
+  -webkit-text-shadow: 0 1px 1px #70d8ff;
+  text-shadow: 0 1px 1px #70d8ff;
+}
+.plan.defi-grey-25 .plan-name {
+  border-bottom: 1px solid #bdbdbd;
+}
+.plan.defi-grey-25 .plan-price {
+  border-top: 1px solid #dbdbdb;
+}
+.plan.defi-grey-25.featured .plan-header,
+.plan.defi-grey-25.featured .plan-name,
+.plan.defi-grey-25.featured .plan-price,
+.plan.defi-grey-25.featured .plan-footer {
+  background-color: #d9d9d9;
+}
+.plan.defi-grey-25:hover .plan-header,
+.plan.defi-grey-25:hover .plan-name,
+.plan.defi-grey-25:hover .plan-price,
+.plan.defi-grey-25:hover .plan-footer {
+  background-color: #e6e6e6;
+}
+.plan.defi-grey-25:hover .plan-name {
+  border-bottom: 1px solid #cccccc;
+}
+.plan.defi-grey-25:hover .plan-price {
+  border-top: 1px solid #ebebeb;
+}
+
+
+.plan.defi-grey-30 > li.plan-footer {
+  background-color: #c2c2c2;
+  border-top: 1px solid #b3b3b3;
+}
+.plan.defi-grey-30 > li.plan-footer .pricing-select {
+  color: #ffffff;
+  background-color: #949494;
+  border: 1px solid #cfcfcf;
+}
+.plan.defi-grey-30 > li.plan-footer .pricing-select:hover {
+  background-color: #7b7b7b;
+  color: #ffffff;
+}
+.plan.defi-grey-30 .plan-name,
+.plan.defi-grey-30 .plan-price {
+  font-family: Calibri,Tahoma,Arial;
+  background-color: #c2c2c2;
+  border-bottom: 1px solid #b3b3b3;
+  color: #01AFF3;
+  -o-text-shadow: 0 1px 1px #70d8ff;
+  -moz-text-shadow: 0 1px 1px #70d8ff;
+  -ms-text-shadow: 0 1px 1px #70d8ff;
+  -webkit-text-shadow: 0 1px 1px #70d8ff;
+  text-shadow: 0 1px 1px #70d8ff;
+}
+.plan.defi-grey-30 .plan-name {
+  border-bottom: 1px solid #b3b3b3;
+}
+.plan.defi-grey-30 .plan-price {
+  border-top: 1px solid #d1d1d1;
+}
+.plan.defi-grey-30.featured .plan-header,
+.plan.defi-grey-30.featured .plan-name,
+.plan.defi-grey-30.featured .plan-price,
+.plan.defi-grey-30.featured .plan-footer {
+  background-color: #cfcfcf;
+}
+.plan.defi-grey-30:hover .plan-header,
+.plan.defi-grey-30:hover .plan-name,
+.plan.defi-grey-30:hover .plan-price,
+.plan.defi-grey-30:hover .plan-footer {
+  background-color: #dbdbdb;
+}
+.plan.defi-grey-30:hover .plan-name {
+  border-bottom: 1px solid #c2c2c2;
+}
+.plan.defi-grey-30:hover .plan-price {
+  border-top: 1px solid #e1e1e1;
+}
