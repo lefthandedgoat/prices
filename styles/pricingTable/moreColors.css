@@ -1685,3 +1685,14 @@
 .plan.defi-grey-30:hover .plan-price {
   border-top: 1px solid #e1e1e1;
 }
+.section-header {
+text-align: left !important;
+  color: #01AFF3 !important;
+  margin-bottom: 10px !important;
+}
+
+.well {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
